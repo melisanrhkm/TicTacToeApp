@@ -1,56 +1,125 @@
-# Welcome to your Expo app 👋
+# TicTacToeApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplikasi permainan Tic-Tac-Toe untuk dua pemain dalam satu perangkat.
 
-## Get started
+## Deskripsi Proyek
 
-1. Install dependencies
+TicTacToeApp adalah aplikasi permainan X dan O pada papan 3×3. Dua pemain bermain secara bergantian pada perangkat yang sama. Aplikasi memperbarui status giliran, memeriksa kondisi kemenangan setelah langkah, dan menyatakan hasil seri jika papan penuh tanpa pemenang. Permainan dapat dimulai kembali melalui tombol **Mulai Ulang**.
+
+README ini hanya menjelaskan tujuan dan perilaku yang tampak pada implementasi; latar belakang akademik atau masalah khusus yang mendorong pembuatan aplikasi tidak dicantumkan karena belum diketahui.
+
+## Fitur Utama
+
+- Papan permainan berukuran 3×3.
+- Pergantian giliran antara pemain X dan pemain O.
+- Deteksi pemenang otomatis berdasarkan baris, kolom, dan diagonal.
+- Deteksi hasil seri ketika semua kotak terisi tanpa pemenang.
+- Kotak yang sudah terisi tidak dapat dipilih kembali.
+- Informasi status giliran, pemenang, atau hasil seri.
+- Tombol **Mulai Ulang** untuk mengosongkan papan dan memulai dari giliran X.
+
+## Teknologi yang Digunakan
+
+- **TypeScript** untuk kode aplikasi.
+- **React Native** untuk membangun antarmuka aplikasi.
+- **Expo SDK 58** untuk pengembangan dan menjalankan aplikasi.
+- **Expo Router** untuk navigasi berbasis file.
+- **npm** untuk instalasi dependency.
+- **React Native Reanimated** dan **React Native Worklets** untuk animasi pada komponen pendukung.
+- **Expo Image**, **Expo Symbols**, dan **React Native Safe Area Context** untuk dukungan gambar, simbol, dan area aman perangkat.
+
+## Struktur Proyek
+
+| Folder/file | Fungsi |
+| --- | --- |
+| `src/app/` | Layar dan rute aplikasi. `index.tsx` berisi permainan, `explore.tsx` berisi layar Explore contoh, dan `_layout.tsx` mengatur layout tab, tema, serta splash screen. |
+| `src/components/` | Komponen yang digunakan oleh layar, termasuk tab, teks/tampilan bertema, tautan eksternal, komponen collapsible, dan animasi. |
+| `src/constants/` | Konstanta aplikasi, seperti warna tema, font, dan spacing. |
+| `src/hooks/` | Hook untuk tema dan skema warna. |
+| `assets/images/` | Aset gambar seperti ikon aplikasi, ikon tab, splash, dan gambar pendukung. Aset demo Expo di folder ini bukan screenshot aplikasi. |
+| `scripts/` | Skrip pemeliharaan starter. `reset-project.js` mereset struktur project; skrip ini dapat memindahkan atau menghapus file, sehingga tidak diperlukan untuk menjalankan aplikasi. |
+| `app.json` | Konfigurasi Expo, termasuk nama aplikasi, ikon, splash screen, plugin, dan konfigurasi platform. |
+| `package.json` | Metadata, dependency, serta perintah yang tersedia untuk menjalankan aplikasi. |
+| `tsconfig.json` | Konfigurasi TypeScript. |
+
+## Persyaratan
+
+- Node.js dan npm.
+- Dependency project yang dipasang melalui `npm install`.
+- Browser untuk menjalankan versi web, atau perangkat/emulator yang sesuai untuk menjalankan aplikasi native.
+
+Versi minimum Node.js/npm dan daftar perangkat yang telah diuji belum ditentukan dalam konfigurasi project.
+
+## Instalasi
+
+1. Clone repository:
+
+   ```bash
+   git clone <repository-url>
+   ```
+
+   Ganti `<repository-url>` dengan alamat repository GitHub yang sebenarnya.
+
+2. Masuk ke folder project:
+
+   ```bash
+   cd TicTacToeApp
+   ```
+
+3. Pasang dependency:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+## Menjalankan Aplikasi
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Jalankan development server Expo:
 
 ```bash
-npm run reset-project
+npx expo start
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+Atau gunakan salah satu perintah berikut:
 
-### Other setup steps
+| Perintah | Fungsi |
+| --- | --- |
+| `npm run android` | Menjalankan Expo dengan target Android. |
+| `npm run ios` | Menjalankan Expo dengan target iOS. |
+| `npm run web` | Menjalankan aplikasi versi web. |
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Ketersediaan target native bergantung pada perangkat dan lingkungan pengembangan yang digunakan.
 
-## Learn more
+## Cara Bermain
 
-To learn more about developing your project with Expo, look at the following resources:
+1. Buka aplikasi dan tampilkan papan permainan.
+2. Pemain pertama menggunakan **X**; pemain kedua menggunakan **O**.
+3. Pilih kotak kosong pada papan 3×3.
+4. Pemain bergantian memilih kotak hingga salah satu pemain menang atau permainan berakhir seri.
+5. Tekan **Mulai Ulang** untuk mengosongkan papan dan bermain kembali.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Screenshot Aplikasi
 
-## Join the community
+### Tampilan Awal
+![Tampilan Awal](docs/screenshots/tampilan-awal.jpg)
 
-Join our community of developers creating universal apps.
+### Permainan Berlangsung
+![Permainan Berlangsung](docs/screenshots/permainan-berlangsung.jpg)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Pengujian
+
+Project belum memiliki hasil pengujian otomatis yang terverifikasi. Tidak ada hasil test yang dapat dilaporkan dalam dokumentasi ini.
+
+## Kontribusi
+
+Kontribusi untuk pengembangan project dapat diajukan melalui perubahan yang terfokus dan pull request. Sertakan ringkasan perubahan serta langkah pengujian yang dilakukan. Pastikan perubahan tetap sesuai dengan fitur dan teknologi yang digunakan project.
+
+## Lisensi
+
+File `LICENSE` yang tersedia menyatakan lisensi **MIT**. File tersebut mencantumkan hak cipta 2015–sekarang atas 650 Industries, Inc. (aka Expo). Silakan merujuk langsung ke file [LICENSE](./LICENSE) untuk ketentuan lengkap.
+
+## Penutup
+
+Terima kasih telah menggunakan atau meninjau TicTacToeApp. Dokumentasi dan kontribusi yang relevan dapat membantu pengembangan project ini.
+
+Untuk informasi pengembangan lebih lanjut, kunjungi [Dokumentasi Expo](https://docs.expo.dev/) dan [Panduan Expo Router](https://docs.expo.dev/router/introduction/).
