@@ -1,14 +1,12 @@
 # TicTacToeApp
 
-Aplikasi permainan Tic-Tac-Toe untuk dua pemain dalam satu perangkat.
+Aplikasi Tic-Tac-Toe untuk dua pemain—bermain bergantian di satu perangkat dan buktikan siapa yang lebih dulu menang!
 
-## Deskripsi Proyek
+## 🎮 Deskripsi Proyek
 
-TicTacToeApp adalah aplikasi permainan X dan O pada papan 3×3. Dua pemain bermain secara bergantian pada perangkat yang sama. Aplikasi memperbarui status giliran, memeriksa kondisi kemenangan setelah langkah, dan menyatakan hasil seri jika papan penuh tanpa pemenang. Permainan dapat dimulai kembali melalui tombol **Mulai Ulang**.
+TicTacToeApp menghadirkan permainan X dan O pada papan 3×3. Dua pemain berbagi satu perangkat dan bergantian memilih kotak. Status giliran selalu ditampilkan, pemenang diperiksa setelah setiap langkah, dan hasil seri diumumkan ketika papan penuh tanpa pemenang. Ingin bermain lagi? Tekan **Mulai Ulang** untuk mengosongkan papan.
 
-README ini hanya menjelaskan tujuan dan perilaku yang tampak pada implementasi; latar belakang akademik atau masalah khusus yang mendorong pembuatan aplikasi tidak dicantumkan karena belum diketahui.
-
-## Fitur Utama
+## ✨ Fitur Utama
 
 - Papan permainan berukuran 3×3.
 - Pergantian giliran antara pemain X dan pemain O.
@@ -18,7 +16,7 @@ README ini hanya menjelaskan tujuan dan perilaku yang tampak pada implementasi; 
 - Informasi status giliran, pemenang, atau hasil seri.
 - Tombol **Mulai Ulang** untuk mengosongkan papan dan memulai dari giliran X.
 
-## Teknologi yang Digunakan
+## 🧰 Teknologi yang Digunakan
 
 - **TypeScript** untuk kode aplikasi.
 - **React Native** untuk membangun antarmuka aplikasi.
@@ -28,7 +26,7 @@ README ini hanya menjelaskan tujuan dan perilaku yang tampak pada implementasi; 
 - **React Native Reanimated** dan **React Native Worklets** untuk animasi pada komponen pendukung.
 - **Expo Image**, **Expo Symbols**, dan **React Native Safe Area Context** untuk dukungan gambar, simbol, dan area aman perangkat.
 
-## Struktur Proyek
+## 🗂️ Struktur Proyek
 
 | Folder/file | Fungsi |
 | --- | --- |
@@ -42,23 +40,22 @@ README ini hanya menjelaskan tujuan dan perilaku yang tampak pada implementasi; 
 | `package.json` | Metadata, dependency, serta perintah yang tersedia untuk menjalankan aplikasi. |
 | `tsconfig.json` | Konfigurasi TypeScript. |
 
-## Persyaratan
+## ✅ Persyaratan
 
 - Node.js dan npm.
 - Dependency project yang dipasang melalui `npm install`.
 - Browser untuk menjalankan versi web, atau perangkat/emulator yang sesuai untuk menjalankan aplikasi native.
 
-Versi minimum Node.js/npm dan daftar perangkat yang telah diuji belum ditentukan dalam konfigurasi project.
 
-## Instalasi
+## 📦 Instalasi
 
-1. Clone repository:
+Ikuti langkah berikut untuk menyiapkan project:
+
+1. Clone repository. Ganti `<repository-url>` dengan alamat repository GitHub yang sebenarnya:
 
    ```bash
    git clone <repository-url>
    ```
-
-   Ganti `<repository-url>` dengan alamat repository GitHub yang sebenarnya.
 
 2. Masuk ke folder project:
 
@@ -72,15 +69,15 @@ Versi minimum Node.js/npm dan daftar perangkat yang telah diuji belum ditentukan
    npm install
    ```
 
-## Menjalankan Aplikasi
+## 🚀 Menjalankan Aplikasi
 
-Jalankan development server Expo:
+Mulai development server Expo dengan perintah:
 
 ```bash
 npx expo start
 ```
 
-Atau gunakan salah satu perintah berikut:
+Untuk memilih target secara langsung, gunakan salah satu perintah berikut:
 
 | Perintah | Fungsi |
 | --- | --- |
@@ -90,36 +87,31 @@ Atau gunakan salah satu perintah berikut:
 
 Ketersediaan target native bergantung pada perangkat dan lingkungan pengembangan yang digunakan.
 
-## Cara Bermain
+## 🕹️ Cara Bermain
 
-1. Buka aplikasi dan tampilkan papan permainan.
-2. Pemain pertama menggunakan **X**; pemain kedua menggunakan **O**.
+1. Buka aplikasi hingga papan permainan tampil.
+2. Pemain pertama menggunakan **X**, lalu pemain kedua menggunakan **O**.
 3. Pilih kotak kosong pada papan 3×3.
-4. Pemain bergantian memilih kotak hingga salah satu pemain menang atau permainan berakhir seri.
-5. Tekan **Mulai Ulang** untuk mengosongkan papan dan bermain kembali.
+4. Bergantian memilih kotak hingga ada pemain yang menang atau permainan berakhir seri.
+5. Siap bermain lagi? Tekan **Mulai Ulang** untuk mengosongkan papan.
 
-## Screenshot Aplikasi
+## 🖼️ Screenshot Aplikasi
 
 ### Tampilan Awal
+
 ![Tampilan Awal](docs/screenshots/tampilan-awal.jpg)
 
 ### Permainan Berlangsung
+
 ![Permainan Berlangsung](docs/screenshots/permainan-berlangsung.jpg)
 
-## Pengujian
 
-Project belum memiliki hasil pengujian otomatis yang terverifikasi. Tidak ada hasil test yang dapat dilaporkan dalam dokumentasi ini.
+## 📄 Lisensi
 
-## Kontribusi
+Project ini menggunakan lisensi **MIT**. File `LICENSE` mencantumkan hak cipta 2015–sekarang atas 650 Industries, Inc. (aka Expo). Baca [LICENSE](./LICENSE) untuk melihat ketentuan lengkap.
 
-Kontribusi untuk pengembangan project dapat diajukan melalui perubahan yang terfokus dan pull request. Sertakan ringkasan perubahan serta langkah pengujian yang dilakukan. Pastikan perubahan tetap sesuai dengan fitur dan teknologi yang digunakan project.
+## 👋 Penutup
 
-## Lisensi
+Terima kasih telah mencoba atau meninjau TicTacToeApp. Dokumentasi dan kontribusi yang relevan akan membantu pengembangan project ini.
 
-File `LICENSE` yang tersedia menyatakan lisensi **MIT**. File tersebut mencantumkan hak cipta 2015–sekarang atas 650 Industries, Inc. (aka Expo). Silakan merujuk langsung ke file [LICENSE](./LICENSE) untuk ketentuan lengkap.
-
-## Penutup
-
-Terima kasih telah menggunakan atau meninjau TicTacToeApp. Dokumentasi dan kontribusi yang relevan dapat membantu pengembangan project ini.
-
-Untuk informasi pengembangan lebih lanjut, kunjungi [Dokumentasi Expo](https://docs.expo.dev/) dan [Panduan Expo Router](https://docs.expo.dev/router/introduction/).
+Untuk informasi pengembangan lebih lanjut, kunjungi [Dokumentasi Expo](https://docs.expo.dev/) atau [Panduan Expo Router](https://docs.expo.dev/router/introduction/).
